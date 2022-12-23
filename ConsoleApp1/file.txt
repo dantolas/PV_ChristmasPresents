@@ -1,0 +1,2 @@
+Fred; fireplace:0.4456,table:0.4456,peen:0.2 fireplace:0.4456,table:0.4456,peen:0.2 fireplace:0.4456,table:0.4456,peen:0.2; Box,200,small wand,400,medium hand,1.25554545454545,medium leg,1,large
+Amy; stairs:0.4456,table:0.4456,peen:0.2 stairs:0.4456,table:0.4456,peen:0.2 stairs:0.4456,table:0.4456,peen:0.2; Box,200,small wand,400,medium hand,1.25554545454545,medium leg,1,llarge

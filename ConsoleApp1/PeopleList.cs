@@ -28,9 +28,7 @@ namespace ConsoleApp1
         public void calculateHidingPlaces()
         {
             peopleList.ForEach(person => {
-                Console.WriteLine("--------------------");
                 person.calculateHidingPlaces();
-                Console.WriteLine("--------------------");
             });
         }
     }

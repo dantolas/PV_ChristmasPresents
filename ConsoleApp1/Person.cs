@@ -16,7 +16,7 @@ namespace ConsoleApp1
         //List darku ktere osoba ma dostat
         public List<Present> presents;
 
-        //Constructor used when you are not loading items from files
+        //
         public Person(string name)
         {
             this.name = name;
@@ -24,19 +24,17 @@ namespace ConsoleApp1
             presents = new List<Present>();
         }
 
-        //Constructor used when everything is loaded from a file
-        public Person(string name, string file)
-        {
-
-        }
-
-
-        //Method that reads stuff from file
-        public void readFile(string file)
-        {
-
-        }
         
+
+
+
+        
+        
+
+        public void setPresents(List<Present> list)
+        {
+            this.presents = list;
+        }
 
         //Do metody vstupuje list presne 3 map V PRESNEM PORADI!!! small,medium,large: key=skrys,val=pravdepodobnost nalezeni
         public void setHidingPlaces(List<Dictionary<string, double>> hidingPlaces)
@@ -46,9 +44,11 @@ namespace ConsoleApp1
 
                 throw new ArgumentOutOfRangeException("There can only by 3 different sets of hidingPlaces and values, each for one gift size.");
             }
+            hidingPlaces.ForEach(dic => { Console.WriteLine(dic.Keys.First()); });
             this.hidingPlaces.Add("small", hidingPlaces.ElementAt(0));
             this.hidingPlaces.Add("medium", hidingPlaces.ElementAt(1));
             this.hidingPlaces.Add("large", hidingPlaces.ElementAt(2));
+            Console.WriteLine("Done here");
 
         }
 
@@ -56,6 +56,7 @@ namespace ConsoleApp1
         //Also deletes the best suggestion (first suggestion if there are more than one) from the map of hiding places so that the next gift has a spot for itself
         public void calculateHidingPlaces()
         {
+            Console.WriteLine("-------------------------");
             List<string>? currentBestPlaces = new List<string>();
             foreach (Present darek in presents)
             {
@@ -82,6 +83,7 @@ namespace ConsoleApp1
                 if(hidingPlaces[darek.size].Count() != 0) hidingPlaces[darek.size].Remove(currentBestPlaces.ElementAt(0));
 
             }
+            Console.WriteLine("-------------------------");
         }
 
         //Method that returns a list of the best hiding places for a gift put into it

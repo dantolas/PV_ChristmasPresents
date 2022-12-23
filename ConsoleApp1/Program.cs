@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine(Directory.GetCurrentDirectory());
             Dictionary<string,double> hidingPlacesSmall= new Dictionary<string,double>();
             hidingPlacesSmall.Add("Fireplace", 0.125);
             hidingPlacesSmall.Add("Tree", 0.250);
@@ -35,9 +35,16 @@
             p.presents.Add(new Present("cat", 100, "small"));
             p.presents.Add(new Present("Tiger", 100, "large"));
 
+            
             PeopleList pl = new PeopleList();
             pl.Add(p);
+            
             pl.calculateHidingPlaces();
+
+            Console.WriteLine("--------------------------------------");
+            PeopleList pl2 = new PeopleList();
+            Loader.something("../../../file.txt", pl2);
+            pl2.calculateHidingPlaces();
         }
     }
 }

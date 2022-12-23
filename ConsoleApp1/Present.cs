@@ -9,10 +9,10 @@ namespace ConsoleApp1
     internal class Present
     {
         public string name{ get; private set; }
-        public int price { get; private set; }
+        public double price { get; private set; }
         public string size { get; private set; }
 
-        public Present(string name, int price, string size)
+        public Present(string name, double price, string size)
         {
             this.name = name;
             this.price = price;
