@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
@@ -54,10 +55,13 @@ namespace ConsoleApp1
                 string[] presentLine = areas[2].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 foreach(string present in presentLine)
                 {
-                    string[] parts = present.Split(new char[] { ',' });
+                    string[] parts = present.Split(new char[] { ',' },StringSplitOptions.RemoveEmptyEntries);
                     presentName = parts[0];
                     presentPrice = Convert.ToDouble(parts[1]);
+                    
                     presentSize = parts[2];
+                    
+
 
                     presents.Add(new Present(presentName, presentPrice, presentSize));
                 }

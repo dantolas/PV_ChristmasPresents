@@ -44,11 +44,11 @@ namespace ConsoleApp1
 
                 throw new ArgumentOutOfRangeException("There can only by 3 different sets of hidingPlaces and values, each for one gift size.");
             }
-            hidingPlaces.ForEach(dic => { Console.WriteLine(dic.Keys.First()); });
+            
             this.hidingPlaces.Add("small", hidingPlaces.ElementAt(0));
             this.hidingPlaces.Add("medium", hidingPlaces.ElementAt(1));
             this.hidingPlaces.Add("large", hidingPlaces.ElementAt(2));
-            Console.WriteLine("Done here");
+            
 
         }
 
@@ -66,7 +66,7 @@ namespace ConsoleApp1
                 if (currentBestPlaces == null)
                 {
                     Console.WriteLine(this.name + ": " + darek);
-                    Console.WriteLine("   -There is no more room for this gift :( ");
+                    Console.WriteLine("   =>There is no more room for this gift :( ");
                     Console.WriteLine();
                     continue;
                 }
@@ -77,7 +77,7 @@ namespace ConsoleApp1
                     print += s +":"+hidingPlaces[darek.size][s]+" -- ";
                 }
                 Console.WriteLine(this.name+": "+darek);
-                Console.WriteLine("   -Best place to hide gift:: "+print);
+                Console.WriteLine("   =>Best place to hide gift:: "+print);
                 Console.WriteLine();
                 //Removes the best suggestion if the map of hiding places isn't empty
                 if(hidingPlaces[darek.size].Count() != 0) hidingPlaces[darek.size].Remove(currentBestPlaces.ElementAt(0));
@@ -91,7 +91,9 @@ namespace ConsoleApp1
         {
             double lowestChance = 1;
             List<string> bestPlaces = new List<string>();
-
+            
+            
+            
             if(hidingPlaces[p.size].Count() == 0)
             {
                 return null;
