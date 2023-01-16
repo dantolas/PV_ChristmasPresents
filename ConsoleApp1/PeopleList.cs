@@ -25,10 +25,10 @@ namespace ConsoleApp1
             this.peopleList.Add(person);
         }
 
-        public void calculateHidingPlaces()
+        public void CalculateHidingPlaces()
         {
             peopleList.ForEach(person => {
-                person.calculateHidingPlaces();
+                person.CalculateHidingPlaces();
             });
         }
     }

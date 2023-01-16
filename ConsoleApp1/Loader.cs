@@ -10,10 +10,10 @@ namespace ConsoleApp1
     public class Loader
     {
 
-        public static void something(string filepath,PeopleList peopleList)
+        public static void Something(string filepath,PeopleList peopleList)
         {
             string content = readFile(filepath);
-            List<string> lines = splitFileContent(content);
+            List<string> lines = SplitFileContent(content);
             
             
             string personName;
@@ -45,9 +45,9 @@ namespace ConsoleApp1
                 string[] sizeSplit = areas[1].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 //This places all the hiding places and propabilities to the places dictionaries above
                 //All of this is done in a really restricting way due to the stifness of the format, but It's a single school project and I'm too lazy to look up or god forbid make a JSON interpreter for C# so if you are reading this this is my confession that this sucks but I don't care please grade me well thank you
-                addPlacesToDictionary(sizeSplit[0],placesSmall);
-                addPlacesToDictionary(sizeSplit[1], placesMedium);
-                addPlacesToDictionary(sizeSplit[2], placesLarge);
+                AddPlacesToDictionary(sizeSplit[0],placesSmall);
+                AddPlacesToDictionary(sizeSplit[1], placesMedium);
+                AddPlacesToDictionary(sizeSplit[2], placesLarge);
                 placesList = new List<Dictionary<string, double>> { placesSmall, placesMedium, placesLarge };
                 
 
@@ -68,8 +68,8 @@ namespace ConsoleApp1
 
                 //Creating a person, setting her hiding places and her gifts, all from the data just read above
                 Person p = new Person(personName);
-                p.setHidingPlaces(placesList);
-                p.setPresents(presents);
+                p.SetHidingPlaces(placesList);
+                p.SetPresents(presents);
                 //Adding that person to a list of people passed into the method
                 peopleList.Add(p);
 
@@ -79,7 +79,7 @@ namespace ConsoleApp1
 
         }
 
-        public static void addPlacesToDictionary(string line, Dictionary<string,double> places)
+        public static void AddPlacesToDictionary(string line, Dictionary<string,double> places)
         {
             string[] placesWithChances = line.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
             foreach(string place in placesWithChances)
@@ -90,7 +90,7 @@ namespace ConsoleApp1
         }
 
         //Returns a list of lines
-        public static List<string> splitFileContent(string content)
+        public static List<string> SplitFileContent(string content)
         {
             char[] separator = { '\n' };
             string[] areas = content.Split(separator, StringSplitOptions.RemoveEmptyEntries);

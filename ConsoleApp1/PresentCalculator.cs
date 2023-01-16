@@ -284,9 +284,9 @@ namespace ConsoleApp1
                 //Creating large stashes
                 Dictionary<string, double> large = CreateStash(numberInput, input, random, "velké");
                 List<Dictionary<string, double>> stashList = new List<Dictionary<string, double>>() { small, medium, large };
-                p.setHidingPlaces(stashList);
+                p.SetHidingPlaces(stashList);
                 List<Present> presentList = CreatePresentsList(input);
-                p.setPresents(presentList);
+                p.SetPresents(presentList);
                 peoplelist.Add(p);
                 Console.WriteLine("Osoba pridana\n1)Vytvorit dalsi osobu\n2)Finish");
                 input = Console.ReadLine();
@@ -301,7 +301,7 @@ namespace ConsoleApp1
 
 
 
-            peoplelist.calculateHidingPlaces();
+            peoplelist.CalculateHidingPlaces();
         }
         /// <summary>
         /// Method containing code to read everything from a file
@@ -332,8 +332,8 @@ namespace ConsoleApp1
                     input = Console.ReadLine();
                     try
                     {
-                        Loader.something(input, peopleList);
-                        peopleList.calculateHidingPlaces();
+                        Loader.Something(input, peopleList);
+                        peopleList.CalculateHidingPlaces();
 
                     }
                     catch (FileNotFoundException e)
@@ -370,7 +370,7 @@ namespace ConsoleApp1
                 presents.Add(new Present("Plushie", 100, "medium"));
                 presents.Add(new Present("Lotion", 150, "medium"));
                 //Adding presents to person
-                p.setPresents(presents);
+                p.SetPresents(presents);
                 //Creating 3 sets of hiding places: <small><medium><large>
                 List<string> stashes = new List<string>() { "Attic", "Under the table", "Outside" };
 
@@ -384,11 +384,11 @@ namespace ConsoleApp1
                 list.Add(small);
                 list.Add(medium);
                 list.Add(large);
-                p.setHidingPlaces(list);
+                p.SetHidingPlaces(list);
                 peopleList.Add(p);
                 continue;
             }
-            peopleList.calculateHidingPlaces();
+            peopleList.CalculateHidingPlaces();
             Console.WriteLine("Ukazku programu naleznete ve tride PresentCalculator.cs metoda ProgramShowOff");
         }
 
