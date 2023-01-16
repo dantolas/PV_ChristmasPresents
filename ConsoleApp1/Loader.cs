@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Loader
+    public class Loader
     {
 
         public static void something(string filepath,PeopleList peopleList)

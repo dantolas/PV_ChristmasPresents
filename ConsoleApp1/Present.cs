@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Present
+    public class Present
     {
         public string name{ get; private set; }
         public double price { get; private set; }

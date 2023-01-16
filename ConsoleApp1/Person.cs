@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Person
+    public class Person
     {
 
         public string name { get; private set; }
