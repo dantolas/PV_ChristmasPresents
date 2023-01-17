@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\kutas\\.nuget\\packages\\": {},
+    "C:\\Users\\kuta\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\School\\programming\\C#\\christmasPresents\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\kuta\\Desktop\\temp\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "D:\\School\\programming\\C#\\christmasPresents\\ConsoleApp1\\ConsoleApp1.csproj",
-      "packagesPath": "C:\\Users\\kutas\\.nuget\\packages\\",
-      "outputPath": "D:\\School\\programming\\C#\\christmasPresents\\ConsoleApp1\\obj\\",
+      "projectPath": "C:\\Users\\kuta\\Desktop\\temp\\ConsoleApp1\\ConsoleApp1.csproj",
+      "packagesPath": "C:\\Users\\kuta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kuta\\Desktop\\temp\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\kutas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kuta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -56,8 +56,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -66,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

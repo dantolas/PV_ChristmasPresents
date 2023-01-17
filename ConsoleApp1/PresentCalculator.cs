@@ -90,6 +90,7 @@ namespace ConsoleApp1
 
             Console.WriteLine("---------------------------------------");
         }
+
         /// <summary>
         /// Method that creates a list of presents when manually entering presents
         /// </summary>
@@ -151,6 +152,7 @@ namespace ConsoleApp1
             return list;
 
         }
+
         /// <summary>
         /// Method holding code and method calls to create stashes for all 3 gift sizes when manually entering
         /// </summary>
@@ -174,13 +176,13 @@ namespace ConsoleApp1
             }
             numberInput = Convert.ToInt32(input);
 
-            if (numberInput == 2)
+            if (numberInput >= 2)
             {
                 return CreateHidingPlaces(true, random);
 
             }
 
-            if (numberInput == 1)
+            if (numberInput <= 1)
             {
                 return CreateHidingPlaces(false, random);
             }
@@ -188,6 +190,7 @@ namespace ConsoleApp1
 
 
         }
+       
         /// <summary>
         /// Method that creates hiding places when manually entering
         /// </summary>
@@ -303,6 +306,7 @@ namespace ConsoleApp1
 
             peoplelist.CalculateHidingPlaces();
         }
+       
         /// <summary>
         /// Method containing code to read everything from a file
         /// </summary>
@@ -316,7 +320,7 @@ namespace ConsoleApp1
             do
             {
 
-                Console.WriteLine("1)=>Zadat cestu k souboru\n2)=>Zobrazit manual");
+                Console.WriteLine("1)=>Zadat cestu k souboru\n2)=>Zobrazit manual\n3)=>exit");
                 input = Console.ReadLine();
                 //input check
                 while (!Regex.IsMatch(input, @"^\d$"))
@@ -347,10 +351,15 @@ namespace ConsoleApp1
                 {
                     ShowLoadManual();
                 }
+                if(numberInput == 3)
+                {
+                    break;
+                }
 
             } while (repeat);
 
         }
+        
         /// <summary>
         /// Shows of the program with some default values
         /// </summary>
